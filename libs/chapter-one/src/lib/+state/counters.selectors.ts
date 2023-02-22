@@ -11,6 +11,11 @@ export const selectCountersState =
 
 const { selectAll, selectEntities } = countersAdapter.getSelectors();
 
+export const selectTotal = createSelector(
+  selectCountersState,
+  (state: CountersState) => state.total
+);
+
 export const selectCountersLoaded = createSelector(
   selectCountersState,
   (state: CountersState) => state.loaded

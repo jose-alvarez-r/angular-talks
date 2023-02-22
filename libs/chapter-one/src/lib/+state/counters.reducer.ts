@@ -10,6 +10,8 @@ export interface CountersState extends EntityState<CountersEntity> {
   selectedId?: string | number; // which Counters record has been selected
   loaded: boolean; // has the Counters list been loaded
   error?: string | null; // last known error (if any)
+
+  total: number
 }
 
 export interface CountersPartialState {
@@ -23,6 +25,7 @@ export const initialCountersState: CountersState =
   countersAdapter.getInitialState({
     // set initial required properties
     loaded: false,
+    total: 0
   });
 
 const reducer = createReducer(
@@ -38,6 +41,11 @@ const reducer = createReducer(
   on(CountersActions.loadCountersFailure, (state, { error }) => ({
     ...state,
     error,
+  })),
+
+  on(CountersActions.addOne, (state) => ({
+    ...state,
+    total: state.total+1,
   }))
 );
 

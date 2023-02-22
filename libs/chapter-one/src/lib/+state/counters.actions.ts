@@ -1,6 +1,9 @@
 import { createAction, props } from '@ngrx/store';
 import { CountersEntity } from './counters.models';
 
+export const addOne = createAction('[Counters Page] Add');
+
+
 export const initCounters = createAction('[Counters Page] Init');
 
 export const loadCountersSuccess = createAction(

@@ -8,14 +8,17 @@ import { appRoutes } from './app.routes';
 import { ChapterOneModule } from "@angular-chapters/chapter-one";
 import { StoreModule } from "@ngrx/store";
 import { EffectsModule } from "@ngrx/effects";
+import { StoreDevtoolsModule } from "@ngrx/store-devtools";
+import { routerReducer } from "@ngrx/router-store";
 
 @NgModule({
   declarations: [AppComponent, NxWelcomeComponent],
   imports: [
-    StoreModule.forRoot({}),
+    StoreModule.forRoot({router: routerReducer}),
     EffectsModule.forRoot([]),
     BrowserModule,
-    RouterModule.forRoot(appRoutes, {initialNavigation: 'enabledBlocking'}),
+    RouterModule.forRoot(appRoutes),
+    StoreDevtoolsModule.instrument(),
     ChapterOneModule,
   ],
   providers: [],

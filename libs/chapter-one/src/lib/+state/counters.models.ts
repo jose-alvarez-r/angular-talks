@@ -4,4 +4,6 @@
 export interface CountersEntity {
   id: string | number; // Primary ID
   name: string;
+
+  total: number;
 }
