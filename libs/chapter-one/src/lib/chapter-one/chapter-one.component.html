@@ -1,6 +1,19 @@
-<p>chapter-one works!</p>
+<h1>Chapter One</h1>
 
 
-<div >{{counter|async}}</div>
+<div class="buttons">
+  <button (click)="reset()">Reset</button>
+  <button (click)="add()">Add</button>
+  <button (click)="loadNewCountersFromDatabase()">Load new Counters from API</button>
+  <button (click)="addOneMoreFromApi()">Add one more from API</button>
+</div>
 
-<button (click)="add()">Add</button>
+<div *ngIf="counters|async as counterList">
+  <ul>
+    <li *ngFor="let counter of counterList">{{counter.name }} - {{counter.total}}</li>
+  </ul>
+
+</div>
+
+
+<div >Total: {{counter|async}}</div>

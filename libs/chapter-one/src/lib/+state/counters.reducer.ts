@@ -34,9 +34,13 @@ const reducer = createReducer(
     ...state,
     loaded: false,
     error: null,
+    total: 0
   })),
   on(CountersActions.loadCountersSuccess, (state, { counters }) =>
-    countersAdapter.setAll(counters, { ...state, loaded: true })
+    countersAdapter.setAll(counters, { ...state, loaded: true, total: counters.reduce((sum, x)=>sum+x.total,0) })
+  ),
+  on(CountersActions.takeOneCounterSuccess, (state, { counter }) =>
+    countersAdapter.addOne(counter, { ...state, loaded: true, total: state.total + counter.total})
   ),
   on(CountersActions.loadCountersFailure, (state, { error }) => ({
     ...state,
@@ -47,6 +51,7 @@ const reducer = createReducer(
     ...state,
     total: state.total+1,
   }))
+
 );
 
 export function countersReducer(
