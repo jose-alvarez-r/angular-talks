@@ -4,9 +4,7 @@ import { CountersState } from '../+state/counters.reducer';
 import { Observable } from "rxjs";
 import * as CounterActions from '../+state/counters.actions';
 import * as CounterSelector from '../+state/counters.selectors';
-import { selectTotal } from "../+state/counters.selectors";
 import { CountersEntity } from "@angular-chapters/chapter-one";
-import { takeOneCounterSuccess } from "../+state/counters.actions";
 
 @Component({
   selector: 'angular-chapters-chapter-one',
