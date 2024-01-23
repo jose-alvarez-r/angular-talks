@@ -1,10 +1,10 @@
 /* eslint-disable */
 export default {
-  displayName: 'chapter-one',
+  displayName: 'chapter-one-basic-ngrx',
   preset: '../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
   globals: {},
-  coverageDirectory: '../../coverage/libs/chapter-one',
+  coverageDirectory: '../../coverage/libs/chapter-one-basic-ngrx',
   transform: {
     '^.+\\.(ts|mjs|js|html)$': [
       'jest-preset-angular',

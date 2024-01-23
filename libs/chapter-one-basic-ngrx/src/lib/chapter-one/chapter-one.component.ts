@@ -1,23 +1,22 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { Store } from "@ngrx/store";
+import { Store } from '@ngrx/store';
 import { CountersState } from '../+state/counters.reducer';
-import { Observable } from "rxjs";
+import { Observable } from 'rxjs';
 import * as CounterActions from '../+state/counters.actions';
 import * as CounterSelector from '../+state/counters.selectors';
-import { CountersEntity } from "@angular-chapters/chapter-one";
+import { CountersEntity } from 'chapter-one-basic-ngrx';
 
 @Component({
   selector: 'angular-chapters-chapter-one',
   templateUrl: './chapter-one.component.html',
   styleUrls: ['./chapter-one.component.css'],
-  encapsulation: ViewEncapsulation.Emulated
+  encapsulation: ViewEncapsulation.Emulated,
 })
-export class ChapterOneComponent implements OnInit{
+export class ChapterOneComponent implements OnInit {
   counter: Observable<number> | undefined;
   counters: Observable<CountersEntity[]> | undefined;
 
-  constructor(public store: Store<CountersState>) {
-  }
+  constructor(public store: Store<CountersState>) {}
 
   ngOnInit(): void {
     this.counter = this.store.select(CounterSelector.selectTotal);
@@ -31,13 +30,11 @@ export class ChapterOneComponent implements OnInit{
 
   loadNewCountersFromDatabase() {
     this.store.dispatch(CounterActions.loadNewCountersFromDatabase());
-
   }
 
   reset() {
     this.store.dispatch(CounterActions.initCounters());
   }
-
 
   addOneMoreFromApi() {
     this.store.dispatch(CounterActions.takeOneCounter());

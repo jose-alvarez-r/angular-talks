@@ -6,14 +6,15 @@ export const takeOneCounterSuccess = createAction(
   props<{ counter: CountersEntity }>()
 );
 
-
-export const takeOneCounter = createAction('[Counters Page] Ey! I want one more counter from API');
+export const takeOneCounter = createAction(
+  '[Counters Page] Ey! I want one more counter from API'
+);
 export const reset = createAction('[Counters Page] reset');
-export const loadNewCountersFromDatabase = createAction('[Counters Page] loadNewCountersFromDatabase');
-
+export const loadNewCountersFromDatabase = createAction(
+  '[Counters Page] loadNewCountersFromDatabase'
+);
 
 export const addOne = createAction('[Counters Page] Add');
-
 
 export const initCounters = createAction('[Counters Page] Init');
 

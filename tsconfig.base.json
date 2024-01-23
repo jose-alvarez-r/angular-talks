@@ -15,7 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@angular-chapters/chapter-one": ["libs/chapter-one/src/index.ts"]
+      "chapter-one-basic-ngrx": ["libs/chapter-one-basic-ngrx/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
