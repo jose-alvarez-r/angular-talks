@@ -15,7 +15,7 @@ import { StoreDevtoolsModule } from "@ngrx/store-devtools";
       fromCounters.countersReducer
     ),
     EffectsModule.forFeature([CountersEffects]),
-    StoreDevtoolsModule.instrument(),
+    StoreDevtoolsModule.instrument({connectInZone: true}),
 
   ],
   declarations: [

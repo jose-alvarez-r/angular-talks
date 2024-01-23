@@ -18,7 +18,7 @@ import { routerReducer } from "@ngrx/router-store";
     EffectsModule.forRoot([]),
     BrowserModule,
     RouterModule.forRoot(appRoutes),
-    StoreDevtoolsModule.instrument(),
+    StoreDevtoolsModule.instrument({connectInZone: true}),
     ChapterOneModule,
   ],
   providers: [],
