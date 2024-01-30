@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "chapter-one-basic-ngrx": ["libs/chapter-one-basic-ngrx/src/index.ts"]
+      "chapter-one-basic-ngrx": ["libs/chapter-one-basic-ngrx/src/index.ts"],
+      "signals-basics": ["libs/signals/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
