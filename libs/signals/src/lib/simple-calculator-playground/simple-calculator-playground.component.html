@@ -1,0 +1,13 @@
+<h3>Basic Signal example</h3>
+<hr>
+<input type="number" [ngModel]="$a()" (change)="aChanged($any($event.target).value)" />
+<input type="number" [ngModel]="$b()" (change)="bChanged($any($event.target).value)" />
+
+
+Result ({{ $a() }}+{{ $b() }}): {{ $z() }}
+
+
+<div class="flicker">
+  <button (click)="flickerFree()">Signal benchmark --> {{ $x() }}</button>
+  <button (click)="flickerFreeSubject()">Behaviour subject benchmark --> {{ flickerFreeBehaviourSubject|async }}</button>
+</div>

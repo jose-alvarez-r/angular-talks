@@ -1,0 +1,35 @@
+<h3>Battle Simulator</h3>
+<hr>
+<div class="grid">
+  <h3>Select a Hero </h3>
+  <span>VS</span>
+  <h3>Select a Villain</h3>
+</div>
+<div class="grid">
+  <div>
+    <select (change)="changeSelectedHero($any($event.target).value)">
+      <option *ngFor="let hero of heroList" [ngValue]="hero">{{ hero.name }}</option>
+    </select>
+    <div>{{ $selectedHero()|json }}</div>
+  </div>
+  <div></div>
+  <div>
+    <select (change)="changeSelectedVillain($any($event.target).value)">
+      <option *ngFor="let vill of villainList" [ngValue]="vill">{{ vill.name }}</option>
+    </select>
+    <div>{{ $selectedVillain()|json }}</div>
+
+  </div>
+</div>
+
+<div class="grid">
+  <div>
+    <button (click)="powerUpHero()">Power Up Hero +10</button>
+  </div>
+  <div></div>
+  <div>
+    <button (click)="powerUpVillain()">Power Up Villain +10</button>
+  </div>
+</div>
+<h3 (click)="showWinner = true">Winner</h3>
+<h3 [hidden]="!showWinner" >{{ $winner().name }}</h3>

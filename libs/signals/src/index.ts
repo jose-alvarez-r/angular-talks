@@ -1,1 +1,1 @@
-export * from './lib/signals-basics/signals-basics.module';
+export * from './lib/signals-basics.module';

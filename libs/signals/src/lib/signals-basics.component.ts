@@ -6,4 +6,6 @@ import { Component } from '@angular/core';
   styleUrl: './signals-basics.component.css'
 })
 export class SignalsBasicsComponent {
+  battleSimulatorView = false;
+  basicView = false;
 }
