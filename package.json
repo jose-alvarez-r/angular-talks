@@ -2,7 +2,9 @@
   "name": "angular-chapters",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "start": "nx run angular-chapters:serve --host 0.0.0.0 --port 8080"
+  },
   "private": true,
   "dependencies": {
     "@angular/animations": "17.0.9",
