@@ -7,6 +7,7 @@ import { BattleSimulatorComponent } from './battle-simulator/battle-simulator.co
 import {
   SimpleCalculatorPlaygroundComponent
 } from './simple-calculator-playground/simple-calculator-playground.component';
+import { StateManagementComponent } from './state-management/state-management.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import {
     RouterModule.forChild([{ path: '', component: SignalsBasicsComponent }]),
     FormsModule,
     BattleSimulatorComponent,
-    SimpleCalculatorPlaygroundComponent
+    SimpleCalculatorPlaygroundComponent,
+    StateManagementComponent
   ]
 })
 export class SignalsBasicsModule {

@@ -3,8 +3,11 @@
 <button (click)="basicView=!basicView; battleSimulatorView = !basicView"> Basic example</button>
 
 <button (click)="battleSimulatorView=!battleSimulatorView; basicView=!battleSimulatorView"> Battle Simulator</button>
+
+<button (click)="stateManagementView=!stateManagementView; "> State management </button>
 </div>
 
 
 <simple-calculator-playground *ngIf="basicView"></simple-calculator-playground>
 <battle-simulator *ngIf="battleSimulatorView"></battle-simulator>
+<lib-state-management *ngIf="stateManagementView"></lib-state-management>

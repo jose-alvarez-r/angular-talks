@@ -8,4 +8,5 @@ import { Component } from '@angular/core';
 export class SignalsBasicsComponent {
   battleSimulatorView = false;
   basicView = false;
+  stateManagementView = false;
 }

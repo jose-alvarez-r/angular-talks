@@ -31,5 +31,5 @@
     <button (click)="powerUpVillain()">Power Up Villain +10</button>
   </div>
 </div>
-<h3 (click)="showWinner = true">Winner</h3>
+<h3 (click)="showWinner = true">Winner (Computed signal)</h3>
 <h3 [hidden]="!showWinner" >{{ $winner().name }}</h3>

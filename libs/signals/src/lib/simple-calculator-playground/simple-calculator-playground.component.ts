@@ -36,6 +36,7 @@ export class SimpleCalculatorPlaygroundComponent {
 
   flickerTestLimit= 100000000;
 
+
   flickerFree(){
     let i = 0;
     while (i<this.flickerTestLimit){
