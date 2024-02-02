@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "start": "nx run angular-chapters:serve --host 0.0.0.0 --port 8080"
+    "start": "nx run angular-chapters:serve --host 0.0.0.0 --port 8080 --disable-host-check"
   },
   "private": true,
   "dependencies": {
